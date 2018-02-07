@@ -1,6 +1,6 @@
-let scene = document.querySelector('a-scene');
 let sky = document.querySelector('a-sky');
 let pillar = document.querySelector('a-cylinder')
+let animationDuration = 15000
 
 // random num generator
 function getRandomNumber(x, y) {
@@ -17,15 +17,15 @@ function getRandomColor() {
   return randomColor;
 }
 
-let duration = 10000
+
 
 // set pillar values
 pillar.setAttribute('color', `#${getRandomColor()}`);
 pillar.setAttribute('open-ended', `true`);
 pillar.setAttribute('radius', `1.5`);
 pillar.setAttribute('height', `10000`);
-pillar.setAttribute('animation__color', `property: color; dir: alternate; dur: ${duration}; easing: easeInOutSine; loop: true; to: #${getRandomColor()}`);
+pillar.setAttribute('animation__color', `property: color; dir: alternate; dur: ${animationDuration}; easing: easeInOutSine; loop: true; to: #${getRandomColor()}`);
 
 // set sky values
 sky.setAttribute('color', `#${getRandomColor()}`);
-sky.setAttribute('animation__color', `property: color; dir: alternate; dur: ${duration}; easing: easeInOutSine; loop: true; to: #${getRandomColor()}`);
+sky.setAttribute('animation__color', `property: color; dir: alternate; dur: ${animationDuration}; easing: easeInOutSine; loop: true; to: #${getRandomColor()}`);
